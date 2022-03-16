@@ -1,0 +1,72 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+.header {
+    background: rgba(225,225,225,0.7);
+    height: 80px;
+    width: 100vw;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    // top: 0;
+    // fixed: フッターなどにかぶる
+    // sticky: 親要素の中だけで効く
+
+    &__logo img {
+        width: 50px;
+    }
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 40vw;
+        &__link {
+            display: flex;
+            font-family: $inter;
+            font-size: 20px;
+            margin: auto 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @include mq(sp){
+        display: none;
+    }
+}
+
+.sp-header{
+    display: none;
+    @include mq(sp){
+        background-color: $white;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+        height: 60px;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 2;
+
+        &__logo{
+            width: 80px;
+        }
+
+        .hamberger{
+            display: flex;
+            flex-flow: column;
+            row-gap: 10px;
+
+            &__border {
+                background-color: $main;
+                height: 2px;
+                width: 32px;
+            }
+        }
+    }
+}

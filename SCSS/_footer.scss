@@ -1,0 +1,90 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+hr.style2 {
+    width: 100vw;
+    height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.footer {
+    height: 120px;
+    width: 100vw;
+    padding: 0 80px;
+    align-items: center;
+    margin: auto 0;
+
+    &-wrap {
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__info1 {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        &__text {
+            font-family: $inter;
+            font-size: 20px;
+            margin-left: auto;
+        }
+    }
+
+    &__logo img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        &__link {
+            display: flex;
+            font-family: $inter;
+            font-size: 20px;
+            margin: auto 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @include mq(sp){
+        display: none;
+    }
+
+    &__info2 {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+
+
+        &__img {
+            width: 100px;
+            // margin-left: auto;
+        }
+
+        &__text {
+            font-family: $caslon;
+        }
+    }
+
+    .copyrights {
+        font-size: 14px;
+        font-family: $inter;
+
+        @include mq(sp){
+            font-size: 12px;
+        }
+    }
+}

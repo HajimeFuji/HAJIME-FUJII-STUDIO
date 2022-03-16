@@ -1,0 +1,528 @@
+@use "reset";
+@use "variables" as *;
+@use "mixin" as *;
+@use "header";
+@use "footer";
+@use "modules";
+@use "common";
+@use "drawer";
+@use "darkmode";
+
+.page-wrap {
+    // display: flex;
+    align-items: center;
+    @include mq(sp){
+        display: initial;
+    }
+}
+
+.main-visual {
+    background: url(../img_photos/owl_alaska.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 80px;
+    margin-bottom: calc(288px + 36px + 36px * 2);
+    z-index: -1;
+
+    @include mq(tab){
+        height: 80vh;
+        width: 100%;
+        margin-bottom: 150px;
+    }
+    @include mq(sp){
+        position: relative;
+        top: 60px;
+        height: 40vh;
+        width: 100%;
+        // aspect-ratio: 4 / 3;
+        // padding-top: 100px;
+        margin-bottom: 150px;
+    }
+    
+    .headingBlock {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $white;
+        text-align: center;
+
+        &__main {
+            font-family: $inter;
+            font-size: 60px;
+        }
+    }
+}
+
+.works {
+    .section-headline {
+        text-align: center;
+    }
+    
+    &-wrap {
+        width: calc(100% - 160px);
+        margin: 0 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 120px;
+        @include mq(tab){
+            max-width: initial;
+            margin: 32px auto 0;
+            padding: 0 20px;
+            row-gap: 24px;
+            .article{
+                width: 49%;
+            }
+        }
+    }
+
+    &-content {
+        .img-box{
+            // BGCを透過させて少し黄色が買った感じに
+            background-color: $main;
+            // 子要素が親要素より大きい時に隠す
+            // img-boxの大きさは指定しないと子要素の大きさ維持
+            overflow: hidden;
+        }
+
+        &__img {
+            height: 380px;
+            width: 380px;
+            display: inline-block;
+            // アクションをゆっくり
+            transition: all .8s ease;
+
+            // ホバーアクション 
+            &:hover{
+                // 拡大して透過
+                transform: scale(1.2);
+                opacity: 0.6;
+            }
+
+            @include mq(sp){
+                height: initial;
+                width: 100%;
+            }
+        }
+
+        &__title {
+            font-family: $sans;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        &__comment {
+            font-family: $sans;
+        }
+    }
+}
+
+.photos {
+    .section-headline {
+        text-align: center;
+    }
+    
+    &-wrap {
+        width: calc(100vw - 160px);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 120px;
+        @include mq(tab){
+            max-width: initial;
+            margin: 32px auto 0;
+            padding: 0 20px;
+            row-gap: 24px;
+            .article{
+                width: 49%;
+            }
+        }
+    }
+
+    &-content {
+        .img-box{
+            // BGCを透過させて少し黄色が買った感じに
+            background-color: $main;
+            // 子要素が親要素より大きい時に隠す
+            // img-boxの大きさは指定しないと子要素の大きさ維持
+            overflow: hidden;
+        }
+
+        &__img {
+            // height: 420px;
+            width: 480px;
+            display: inline-block;
+            // アクションをゆっくり
+            transition: all .8s ease;
+
+            // ホバーアクション 
+            &:hover{
+                // 拡大して透過
+                transform: scale(1.2);
+                opacity: 0.6;
+            }
+
+            @include mq(sp){
+                height: initial;
+                width: 100%;
+            }
+        }
+
+        &__title {
+            font-family: $sans;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+    }
+}
+
+.profile {
+    width: calc(100vw - 160px);
+    margin: 0 auto;
+    
+    @include mq(sp){
+        max-width: initial;
+    }
+
+    .section-headline {
+        margin-bottom: 24px;
+        @include mq(tab){
+            margin-left: 20px;
+        }
+    }
+
+    &-wrap {
+        // width: calc(100vw - 160px);
+        // margin: 0 auto;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .textbox {
+            display: flex;
+            flex-flow: column;
+            max-width: 50%;
+
+            &__headline {
+                color: $black;
+                font-family: $serif;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 48px;
+    
+                @include mq(tab) {
+                    margin-bottom: 20px;
+                }
+                @include mq(sp){
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__text {
+                color: $black;
+                font-family: $serif;
+                font-size: 18px;
+                line-height: 2;
+                margin-bottom: 36px;
+                @include mq(sp){
+                    line-height: 1.8;
+                }
+            }
+    
+            &__text2 {
+                color: $black;
+                font-family: $sans;
+                font-size: 16px;
+                line-height: 2;
+                @include mq(sp){
+                    line-height: 1.8;
+                }
+            }
+        }
+
+        .profile__img {
+            width: 485px;
+            height: 647px;
+            @include mq(sp){
+                position: initial;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.contact {
+    width: calc(100vw - 160px);
+    margin: 0 auto;
+
+    @include mq(tab) {
+        max-width: 800px;
+    }
+
+    @include mq(sp){
+        max-width: initial;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .textbox {
+            display: flex;
+            flex-flow: column;
+
+            &__text {
+                color: $black;
+                font-family: $sans;
+                font-size: 18px;
+                line-height: 2;
+                // margin-top: 60px;
+                @include mq(sp){
+                    line-height: 1.8;
+                }
+            }
+        }
+
+        .sns {
+            width: 485px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            background: #e0e0e0;
+            box-shadow: inset 17px 17px 30px #b5b5b5,
+                        inset -17px -17px 30px #ffffff;
+                    
+            &-link {
+                width: calc(100% * 0.8);
+                display: flex;
+                justify-content: space-around;
+
+                &__tw {
+                    // height: 100px;
+                    // width: 100px;
+                }
+
+                &__fb {
+                    background-color: $black;
+                    color: $white;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    }
+            }
+
+            &-link img {
+                height: 100px;
+                width: 100px;
+            }
+
+            // &-link__fb.fab fa-facebook-f {
+            //     height: 100px;
+            //     width: 100px;
+            // }
+
+
+        }
+    }
+}
+
+
+.section {
+    margin-bottom: 288px;
+
+    @include mq(tab) {
+        margin-bottom: 150px;
+    }
+
+    @include mq(sp){
+        margin-bottom: 96px;
+    }
+}
+
+// Photos -bird & animals- ページ
+.gallery {
+    align-items: center;
+    // margin: 0 auto;
+
+    .section-headline {
+        text-align: center;
+        position: relative;
+        top: 240px;
+    }
+
+    .animals-wrap {
+
+        width: calc(100vw - 160px);
+        // max-width: 100%;
+        padding-top: 170px;
+        padding-bottom: 288px;
+        margin: 0 auto;
+        @include mq(sp){
+            width: 100vw;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 60px;
+            padding-bottom: 96px;
+        }
+
+        /*＝＝＝並び替えボタンのCSS*/
+        .sort-btn{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding:72px 20px 40px;
+        }
+
+        .sort-btn li{
+            background:#eee;
+            list-style:none;
+            border-radius:10px;
+            cursor: pointer;
+            padding: 10px;
+            margin:0 10px;
+        }
+
+        .sort-btn li.active{
+            /*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
+            background:#ccc;	
+        }
+
+            /*＝＝＝Muuriのレイアウトのための調整 */
+        .grid {
+            position: relative;/*並び替えの基準点を指定*/
+        }
+
+        /*各画像の横幅などの設定*/
+        .item {
+            display: block;
+            position: absolute;
+            left: 80px;
+            width: 200px;
+            height: 150px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        /*内側のボックスの高さが崩れないように維持*/
+        .item-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /*画像の横幅を100%にしてレスポンシブ化*/
+        .grid img{
+            width:100%;
+            height:auto;
+            vertical-align: bottom;/*画像の下にできる余白を削除*/
+        }
+
+        /*横幅が768px以下になった際の指定*/
+        @media only screen and (max-width: 768px) {
+        .item {
+            width: 49.5%;/*横並びで2つ表示*/
+        }
+        }
+
+        /*＝＝＝fancyboxサムネイル背景と画像選択時の枠線の指定*/
+        .fancybox-thumbs {
+            background: transparent!important;
+        }
+
+        .fancybox-thumbs__list a:before {
+            border: 6px solid #FA999B;
+        }
+
+
+        /*========= レイアウトのためのCSS ===============*/
+        ul{
+            margin:0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a{
+            color: #333;
+        }
+
+        a:hover,
+        a:active{
+            text-decoration: none;
+        }
+
+        h1{
+            text-align: center;
+            font-size:6vw;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin:30px 0;
+            }
+
+        p{
+            margin:0 10px 10px 10px;
+            word-wrap : break-word;
+        }
+
+    }
+}
+
+.gallery2 {
+    // max-width: calc(100vw - 160px);
+    align-items: center;
+
+    .section-headline {
+        text-align: center;
+        position: relative;
+        top: 240px;
+    }
+
+    .animals2-wrap {
+        width: calc(100vw - 160px);
+        padding-top: 170px;
+        padding-bottom: 288px;
+        margin: 0 auto;
+
+        .category-list {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .category-list img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .category-nav {
+            text-align: center;
+            padding: 40px;
+            margin-top: 32px;
+        }
+        .category-nav label {
+            background: $gray;
+            color: $black;
+            border-radius: 10px;
+            padding: 5px 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .category-nav input[type="radio"] {
+            /* Hide radio buttonns */
+            opacity:0;
+            -webkit-appearance: none;
+            appearance: none;
+            position: absolute;
+        }
+    }
+}
