@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixin" as *;
 
 .section-headline {
     &__sub {
@@ -13,6 +14,11 @@
         font-size: 36px;
         font-weight: bold;
         margin-bottom: 72px;
+                
+        @include mq(sp) {
+            font-size: 24px;
+            margin-bottom: 36px;
+        }
     }
 }
 
@@ -42,6 +48,10 @@
     height: 250px;
     opacity: 0.4;
     margin: auto;
+
+    @include mq(sp){
+        display: none;
+    }
 }
 
 .sidebar2 img {
