@@ -95,31 +95,43 @@ hr.style2 {
         display: flex;
         flex-flow: column;
         align-items: flex-end;
+        justify-content: space-between;
 
         @include mq(sp) {
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
         }
 
+        .ukraine {
 
-        &__img {
-            width: 100px;
             @include mq(sp) {
-                width: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .footer__info2__text {
+                display: none;
+
+                @include mq(sp) {
+                    display: block;
+                    font-family: $serif;
+                    font-size: 12px;
+                    width: 180px;
+                }
+            }
+            .footer__info2__img {
+                width: 120px;
+                // margin-bottom: 10px;
             }
         }
-
-        &__text {
-            font-family: $caslon;
-        }
-    }
-
-    .copyrights {
-        font-size: 14px;
-        font-family: $inter;
-
-        @include mq(sp){
-            font-size: 12px;
+        .copyrights {
+            font-size: 14px;
+            font-family: $inter;
+    
+            @include mq(sp){
+                font-size: 12px;
+            }
         }
     }
 }

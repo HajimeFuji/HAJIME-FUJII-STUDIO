@@ -55,7 +55,7 @@
             font-size: 60px;
 
             &__sub {
-                font-size: 60px;
+                font-size: 72px;
                 color: $main;
             }
 
@@ -266,7 +266,7 @@
         }
 
         .profile__img {
-            width: 485px;
+            width: 440px;
             // height: 647px;
             @include mq(sp){
                 position: initial;
@@ -324,12 +324,12 @@
         }
 
         .sns {
-            width: 485px;
+            width: 440px;
             height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 36px;
+            border-radius: 24px;
             background: #e0e0e0;
             box-shadow: inset 6px 6px 9px #acacac,
                         inset -6px -6px 9px #ffffff;
