@@ -22,8 +22,8 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    top: 80px;
-    margin-bottom: calc(288px + 36px + 36px * 2);
+    top: 64px;
+    margin-bottom: 72px;
     z-index: -1;
 
     @include mq(tab){
@@ -68,12 +68,12 @@
     }
     
     &-wrap {
-        max-width: calc(100% - 160px);
-        margin: 0 80px;
+        max-width: calc(100vw - 160px);
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        row-gap: 120px;
+        row-gap: 40px;
         @include mq(sp){
             max-width: initial;
             margin: 32px auto 0;
@@ -96,8 +96,8 @@
         }
 
         &__img {
-            height: 380px;
-            width: 380px;
+            height: 300px;
+            width: 300px;
             display: inline-block;
             // アクションをゆっくり
             transition: all .8s ease;
@@ -134,10 +134,10 @@
     
     &-wrap {
         max-width: calc(100vw - 160px);
-        margin: 0 80px;
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         row-gap: 180px;
         @include mq(tab){
             max-width: initial;
@@ -160,7 +160,7 @@
         }
 
         &__img {
-            // height: 420px;
+            height: 320px;
             width: 480px;
             display: inline-block;
             // アクションをゆっくり
@@ -188,40 +188,35 @@
 }
 
 .profile {    
-    // @include mq(sp){
-    //     max-width: initial;
-    // }
+    max-width: calc(100vw - 160px);
+    margin: 0 auto;
+
+    @include mq(sp){
+        max-width: initial;
+        width: 100%;
+        padding: 0 20px;
+    }
 
     .section-headline {
         margin-bottom: 24px;
-        margin-left: 80px;
         @include mq(tab){
-            margin-left: 20px;
+            // margin-left: 20px;
         }   
     }
 
     &-wrap {
-        max-width: calc(100vw - 160px);
-        margin: 0 80px;
-        max-width: 100%;
         display: flex;
         justify-content: space-between;
 
         @include mq(sp) {
             display: block;
-            width: 100%;
-            margin: 32px 20px 0;
+            // margin: 32px 20px 0;
             // padding: 0 20px;
         }
 
         .textbox {
             display: flex;
             flex-flow: column;
-            max-width: 50%;
-
-            @include mq(sp) {
-                max-width: initial;
-            }
 
             &__headline {
                 color: $black;
@@ -242,7 +237,7 @@
             &__text {
                 color: $black;
                 font-family: $serif;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 2;
                 margin-bottom: 32px;
                 @include mq(sp){
@@ -269,7 +264,7 @@
             // height: 647px;
             @include mq(sp){
                 position: initial;
-                width: 90%;
+                width: 100%;
                 margin-top: 16px;
             }
         }
@@ -277,34 +272,30 @@
 }
 
 .contact {
+    max-width: calc(100vw - 160px);
+    margin: 0 auto;
 
-    // @include mq(tab) {
-    //     max-width: 800px;
-    // }
-
-    // @include mq(sp){
-    //     max-width: initial;
-    //     width: 100%;
-    //     padding: 0 20px;
-    // }
+    @include mq(sp){
+        max-width: initial;
+        width: 100%;
+        padding: 0 20px;
+    }
 
     .section-headline {
         margin-bottom: 24px;
-        margin-left: 80px;
-        @include mq(tab){
-            margin-left: 20px;
-        }       
+        // margin-left: 80px;
+        // @include mq(tab){
+        //     margin-left: 20px;
+        // }       
     }
 
     &-wrap {
-        width: calc(100vw - 160px);
-        margin: 0 80px;
         display: flex;
         justify-content: space-between;
 
         @include mq(sp) {
             display: block;
-            width: 90%;
+            // width: 90%;
             margin: 32px auto 0;
             // padding: 0 20px;
         }
@@ -320,6 +311,7 @@
                 line-height: 2;
                 // margin-top: 60px;
                 @include mq(sp){
+                    font-size: 14px;
                     line-height: 1.8;
                 }
             }
@@ -331,15 +323,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 25px;
+            border-radius: 36px;
             background: #e0e0e0;
-            box-shadow: inset 17px 17px 30px #b5b5b5,
-                        inset -17px -17px 30px #ffffff;
+            box-shadow: inset 6px 6px 9px #acacac,
+                        inset -6px -6px 9px #ffffff;
 
             @include mq(sp) {
                 margin-top: 24px;
                 width: 100%;
-                height: 120px;
+                height: 80px;
+                border-radius: 18px;
             }
                     
             &-link {
@@ -347,26 +340,32 @@
                 display: flex;
                 justify-content: space-around;
 
-                &__tw {
-                    // height: 100px;
-                    // width: 100px;
-                }
+                // &__fb {
+                //     background-color: $black;
+                //     color: $white;
+                //     display: flex;
+                //     align-items: flex-end;
+                //     justify-content: center;
+                //     height: 100px;
+                //     width: 100px;
+                //     border-radius: 50%;
 
-                &__fb {
-                    background-color: $black;
-                    color: $white;
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: center;
-                    height: 100px;
-                    width: 100px;
-                    border-radius: 50%;
-                    }
+                //     @include mq(sp) {
+                //         height: 60px;
+                //         width: 60px;
+                //     }
+
+                //     }
             }
 
             &-link img {
                 height: 100px;
                 width: 100px;
+
+                @include mq(sp) {
+                    height: 60px;
+                    width: 60px;
+                }
             }
 
             // &-link__fb.fab fa-facebook-f {
@@ -381,41 +380,47 @@
 
 
 .section {
-    margin-bottom: 288px;
+    padding-top: 120px;
+    margin-bottom: 48px;
 
     @include mq(tab) {
+        padding-top: 80px;
         margin-bottom: 150px;
     }
 
     @include mq(sp){
+        padding-top: 40px;
         margin-bottom: 96px;
     }
 }
 
 // Photos -bird & animals- ページ
 .gallery {
-    align-items: center;
-    // margin: 0 auto;
+    max-width: calc(100vw - 160px);
+    margin: 0 auto;
+    @include mq(sp){
+        max-width: initial;
+        width: 100%;
+        padding: 0 20px;
+    }
 
     .section-headline {
         text-align: center;
-        position: relative;
-        top: 240px;
+        // position: relative;
+        @include mq(sp) {
+            padding-top: 100px;
+            margin-bottom: 20px;
+        }
     }
 
     .animals-wrap {
-
-        width: calc(100vw - 160px);
-        // max-width: 100%;
-        padding-top: 170px;
-        // padding-bottom: 288px;
-        margin: 0 80px;
+        // padding-top: 80px;
         @include mq(sp){
-            width: 100vw;
-            padding-right: 20px;
-            padding-left: 20px;
-            padding-top: 60px;
-            padding-bottom: 96px;
+            width: 100%;
+            // padding-right: 20px;
+            // padding-left: 20px;
+            // // padding-top: 60px;
+            // padding-bottom: 96px;
         }
 
         /*＝＝＝並び替えボタンのCSS*/
@@ -423,7 +428,10 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            padding:72px 20px 40px;
+            padding:20px 20px 20px;
+            @include mq(sp) {
+                padding: 10px 0px;
+            }
         }
 
         .sort-btn li{
@@ -452,7 +460,7 @@
             left: 80px;
             width: 200px;
             height: 150px;
-            margin-right: 20px;
+            margin-right: 24px;
             margin-bottom: 20px;
             z-index: 1;
         }
@@ -518,9 +526,7 @@
         }
 
         .btn {
-            margin-top: 72px;
-            margin-right: auto;
-            margin-left: auto;
+            margin: 36px auto;
             // margin: 72px auto 0;
             @include mq(sp){
                 margin-top: 32px;
@@ -531,19 +537,24 @@
 }
 
 .gallery2 {
-    // max-width: calc(100vw - 160px);
-    align-items: center;
+    width: calc(100vw - 160px);
+    margin: 0 auto;
+    @include mq(sp){
+        max-width: initial;
+        width: 100%;
+        padding: 0 20px;
+    }
 
     .section-headline {
         text-align: center;
-        position: relative;
-        top: 240px;
+        // position: relative;
+        @include mq(sp) {
+            padding-top: 100px;
+            margin-bottom: 20px;
+        }
     }
 
     .animals2-wrap {
-        width: calc(100vw - 160px);
-        padding-top: 170px;
-        margin: 0 80px;
 
         .category-list {
             display: grid;
@@ -557,8 +568,10 @@
         }
         .category-nav {
             text-align: center;
-            padding: 40px;
-            margin-top: 32px;
+            padding: 30px;
+            @include mq(sp) {
+                padding: 20px 0px;
+            }
         }
         .category-nav label {
             background: $gray;
@@ -575,28 +588,50 @@
             appearance: none;
             position: absolute;
         }
+        .btn {
+            margin: 36px auto;
+            // margin: 72px auto 0;
+            @include mq(sp){
+                margin-top: 32px;
+            }
+        }
     }
 }
 
 .gallery3 {
-    // max-width: calc(100vw - 160px);
-    align-items: center;
+    max-width: calc(100vw - 160px);
+    margin: 0 auto;
+    @include mq(sp){
+        max-width: initial;
+        width: 100%;
+        padding: 0 20px;
+    }
 
     .section-headline {
         text-align: center;
         position: relative;
-        top: 240px;
+        @include mq(sp) {
+            padding-top: 100px;
+            margin-bottom: 20px;
+        }
     }
 
     .natures-wrap {
-        width: calc(100vw - 160px);
-        padding-top: 170px;
-        // padding-bottom: 288px;
-        margin: 0 80px;
+        // padding-top: 32px;
+        // // padding-bottom: 288px;
+        // margin: 0 80px;
     }
 
     .natures__img {
         margin: 56px auto;
-        width: 80%;
+        width: 60%;
+    }
+
+    .btn {
+        margin: 36px auto;
+        // margin: 72px auto 0;
+        @include mq(sp){
+            margin-top: 32px;
+        }
     }
 }

@@ -15,18 +15,28 @@ hr.style2 {
     align-items: center;
     margin: auto 0;
 
+    @include mq(sp) {
+        padding: 0px 20px;
+    }
+
     &-wrap {
         display: flex;
         height: 100px;
         justify-content: space-between;
         margin-top: 10px;
         margin-bottom: 10px;
+        @include mq(sp) {
+            flex-flow: column;
+        }
     }
 
     &__info1 {
         display: flex;
         flex-flow: column;
         justify-content: space-between;
+        @include mq(sp) {
+            flex-flow: initial;
+        }
     }
 
     &__logo {
@@ -36,31 +46,49 @@ hr.style2 {
             font-family: $inter;
             font-size: 20px;
             margin-left: auto;
+
+            @include mq(sp) {
+                font-size: 12px;
+            }
         }
     }
 
     &__logo img {
         width: 30px;
         margin-right: 10px;
+
+        @include mq(sp) {
+            width: 20px;
+            margin-right: 4px;
+        }
     }
 
     &-nav {
         display: flex;
         justify-content: space-between;
-        text-align: center;
+        align-items: center;
+
+        @include mq(sp) {
+            width: 150px;
+            height: 20px;
+            // margin: auto 0px;
+        }
+
         &__link {
-            display: flex;
+            // display: flex;
             font-family: $inter;
             font-size: 20px;
-            margin: auto 0;
+            // margin: auto 0;
 
-            &:last-child {
-                margin-bottom: 0;
+            // &:last-child {
+            //     margin-bottom: 0;
+            // }
+
+            @include mq(sp) {
+                font-size: 12px;
+                // align-items: center;
             }
         }
-    }
-    @include mq(sp){
-        display: none;
     }
 
     &__info2 {
@@ -68,10 +96,17 @@ hr.style2 {
         flex-flow: column;
         align-items: flex-end;
 
+        @include mq(sp) {
+            align-items: center;
+            justify-content: center;
+        }
+
 
         &__img {
             width: 100px;
-            // margin-left: auto;
+            @include mq(sp) {
+                width: 60px;
+            }
         }
 
         &__text {
