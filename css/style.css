@@ -588,7 +588,7 @@ hr.style2 {
   margin-bottom: 8px;
 }
 .section-headline__main {
-  color: #6E551B;
+  color: #98932D;
   font-family: "Noto sans JP";
   font-size: 36px;
   font-weight: bold;
@@ -822,7 +822,7 @@ li {
 }
 
 .main-visual {
-  background: url(../img_photos/owl_alaska.jpg) center center no-repeat;
+  background: url(../img_photos/owl_alaska_01.jpg) center center no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -854,10 +854,15 @@ li {
   transform: translate(-50%, -50%);
   color: #FFFFFF;
   text-align: center;
+  width: 60%;
 }
 .main-visual .headingBlock__main {
   font-family: "inter";
   font-size: 60px;
+}
+.main-visual .headingBlock__main__sub {
+  font-size: 60px;
+  color: #6E551B;
 }
 @media screen and (max-width:599px) {
   .main-visual .headingBlock__main {

@@ -5,13 +5,14 @@ $(function () {
         timer: false,
         // ぼかし
         transition: 'blur',
-        transitionDuration: 20000,
-        delay: 20000,
+        transitionDuration: 10000,
+        delay: 10000,
         // サイズ大⇒小 動かす
         animation: 'kenburns',
-        animationDuration: 20000,
+        animationDuration: 10000,
     slides: [
-        { src: "./img_photos/birds/shimaenaga_001.JPG" },
+        { src: "./img_photos/owl_alaska_01.jpg" },
+        { src: "./img_photos/owl_alaska.jpg" },
         ]
     });
 
