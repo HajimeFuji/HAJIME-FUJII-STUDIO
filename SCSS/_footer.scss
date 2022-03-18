@@ -48,6 +48,7 @@ hr.style2 {
             margin-left: auto;
 
             @include mq(sp) {
+                font-family: $sans;
                 font-size: 12px;
             }
         }
@@ -80,12 +81,9 @@ hr.style2 {
             font-size: 20px;
             // margin: auto 0;
 
-            // &:last-child {
-            //     margin-bottom: 0;
-            // }
-
             @include mq(sp) {
                 font-size: 12px;
+                font-family: $sans;
                 // align-items: center;
             }
         }
@@ -135,6 +133,7 @@ hr.style2 {
     
             @include mq(sp){
                 font-size: 12px;
+                font-family: $sans;
             }
         }
     }

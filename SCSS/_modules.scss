@@ -10,12 +10,13 @@
 
     &__main {
         color: $maingreen;
-        font-family: $sans;
+        font-family: $inter;
         font-size: 36px;
         font-weight: bold;
         margin-bottom: 48px;
                 
         @include mq(sp) {
+            font-family: $sans;
             font-size: 24px;
             margin-bottom: 24px;
         }

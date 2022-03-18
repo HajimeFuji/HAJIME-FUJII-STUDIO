@@ -59,11 +59,13 @@
                 color: $green;
                 @include mq(sp) {
                     font-size: 16px;
+                    font-family: $sans;                  
                 }
             }
 
             @include mq(sp) {
                 font-size: 16px;
+                font-family: $sans;
             }
 
         }
@@ -90,7 +92,7 @@
             justify-content: space-around;
             row-gap: 32px;
             .article{
-                width: 49%;
+                width: 48%;
             }
         }
     }
@@ -98,7 +100,7 @@
     &-content {
         .img-box{
             // BGCを透過させて少し黄色が買った感じに
-            background-color: $main;
+            background-color: $maingreen;
             // 子要素が親要素より大きい時に隠す
             // img-boxの大きさは指定しないと子要素の大きさ維持
             overflow: hidden;
@@ -128,6 +130,10 @@
             font-family: $sans;
             font-weight: bold;
             margin: 8px 0;
+            @include mq(sp) {
+                font-size: 12px;
+                margin: 4px 0;
+            }
         }
 
         &__comment {
@@ -162,7 +168,7 @@
     &-content {
         .img-box{
             // BGCを透過させて少し黄色が買った感じに
-            background-color: $main;
+            background-color: $maingreen;
             // 子要素が親要素より大きい時に隠す
             // img-boxの大きさは指定しないと子要素の大きさ維持
             overflow: hidden;

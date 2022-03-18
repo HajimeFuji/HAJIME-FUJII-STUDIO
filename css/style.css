@@ -517,6 +517,7 @@ hr.style2 {
 }
 @media screen and (max-width:599px) {
   .footer__logo__text {
+    font-family: "Noto sans JP";
     font-size: 12px;
   }
 }
@@ -548,6 +549,7 @@ hr.style2 {
 @media screen and (max-width:599px) {
   .footer-nav__link {
     font-size: 12px;
+    font-family: "Noto sans JP";
   }
 }
 .footer__info2 {
@@ -594,6 +596,7 @@ hr.style2 {
 @media screen and (max-width:599px) {
   .footer__info2 .copyrights {
     font-size: 12px;
+    font-family: "Noto sans JP";
   }
 }
 
@@ -604,13 +607,14 @@ hr.style2 {
 }
 .section-headline__main {
   color: #98932D;
-  font-family: "Noto sans JP";
+  font-family: "inter";
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 48px;
 }
 @media screen and (max-width:599px) {
   .section-headline__main {
+    font-family: "Noto sans JP";
     font-size: 24px;
     margin-bottom: 24px;
   }
@@ -882,11 +886,13 @@ li {
 @media screen and (max-width:599px) {
   .main-visual .headingBlock__main__sub {
     font-size: 16px;
+    font-family: "Noto sans JP";
   }
 }
 @media screen and (max-width:599px) {
   .main-visual .headingBlock__main {
     font-size: 16px;
+    font-family: "Noto sans JP";
   }
 }
 
@@ -910,11 +916,11 @@ li {
     row-gap: 32px;
   }
   .works-wrap .article {
-    width: 49%;
+    width: 48%;
   }
 }
 .works-content .img-box {
-  background-color: #6E551B;
+  background-color: #98932D;
   overflow: hidden;
 }
 .works-content__img {
@@ -937,6 +943,12 @@ li {
   font-family: "Noto sans JP";
   font-weight: bold;
   margin: 8px 0;
+}
+@media screen and (max-width:599px) {
+  .works-content__title {
+    font-size: 12px;
+    margin: 4px 0;
+  }
 }
 .works-content__comment {
   font-family: "Noto sans JP";
@@ -965,7 +977,7 @@ li {
   }
 }
 .photos-content .img-box {
-  background-color: #6E551B;
+  background-color: #98932D;
   overflow: hidden;
 }
 .photos-content__img {
