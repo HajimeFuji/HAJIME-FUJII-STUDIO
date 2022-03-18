@@ -98,16 +98,17 @@ hr.style2 {
         justify-content: space-between;
 
         @include mq(sp) {
-            align-items: center;
-            justify-content: space-between;
+            align-items: flex-start;
+            // justify-content: space-between;
         }
 
         .ukraine {
 
             @include mq(sp) {
                 display: flex;
+                width: 100%;
                 justify-content: space-between;
-                align-items: center;
+                // align-items: center;
             }
 
             .footer__info2__text {
@@ -122,6 +123,9 @@ hr.style2 {
             }
             .footer__info2__img {
                 width: 120px;
+                @include mq(sp) {
+                    width: 80px;
+                }
                 // margin-bottom: 10px;
             }
         }

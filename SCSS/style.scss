@@ -56,7 +56,10 @@
 
             &__sub {
                 font-size: 72px;
-                color: $main;
+                color: $green;
+                @include mq(sp) {
+                    font-size: 16px;
+                }
             }
 
             @include mq(sp) {
@@ -395,8 +398,8 @@
     }
 
     @include mq(sp){
-        padding-top: 40px;
-        margin-bottom: 96px;
+        padding-top: 80px;
+        margin-bottom: 46px;
     }
 }
 
@@ -469,6 +472,9 @@
             margin-right: 24px;
             margin-bottom: 20px;
             z-index: 1;
+            @include mq(sp) {
+                width: 45%;
+            }
         }
 
         /*内側のボックスの高さが崩れないように維持*/
@@ -486,11 +492,11 @@
         }
 
         /*横幅が768px以下になった際の指定*/
-        @media only screen and (max-width: 768px) {
-        .item {
-            width: 49.5%;/*横並びで2つ表示*/
-        }
-        }
+        // @media only screen and (max-width: 768px) {
+        // .item {
+        //     width: 49.5%;/*横並びで2つ表示*/
+        // }
+        // }
 
         /*＝＝＝fancyboxサムネイル背景と画像選択時の枠線の指定*/
         .fancybox-thumbs {
@@ -503,33 +509,33 @@
 
 
         /*========= レイアウトのためのCSS ===============*/
-        ul{
-            margin:0;
-            padding: 0;
-            list-style: none;
-        }
+        // ul{
+        //     margin:0;
+        //     padding: 0;
+        //     list-style: none;
+        // }
 
         a{
             color: #333;
         }
 
-        a:hover,
-        a:active{
-            text-decoration: none;
-        }
+        // a:hover,
+        // a:active{
+        //     text-decoration: none;
+        // }
 
-        h1{
-            text-align: center;
-            font-size:6vw;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin:30px 0;
-            }
+        // h1{
+        //     text-align: center;
+        //     font-size:6vw;
+        //     letter-spacing: 0.1em;
+        //     text-transform: uppercase;
+        //     margin:30px 0;
+        //     }
 
-        p{
-            margin:0 10px 10px 10px;
-            word-wrap : break-word;
-        }
+        // p{
+        //     margin:0 10px 10px 10px;
+        //     word-wrap : break-word;
+        // }
 
         .btn {
             margin: 36px auto;

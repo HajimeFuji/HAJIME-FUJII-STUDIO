@@ -558,15 +558,14 @@ hr.style2 {
 }
 @media screen and (max-width:599px) {
   .footer__info2 {
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
   }
 }
 @media screen and (max-width:599px) {
   .footer__info2 .ukraine {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
   }
 }
 .footer__info2 .ukraine .footer__info2__text {
@@ -582,6 +581,11 @@ hr.style2 {
 }
 .footer__info2 .ukraine .footer__info2__img {
   width: 120px;
+}
+@media screen and (max-width:599px) {
+  .footer__info2 .ukraine .footer__info2__img {
+    width: 80px;
+  }
 }
 .footer__info2 .copyrights {
   font-size: 14px;
@@ -873,7 +877,12 @@ li {
 }
 .main-visual .headingBlock__main__sub {
   font-size: 72px;
-  color: #6E551B;
+  color: #cac43b;
+}
+@media screen and (max-width:599px) {
+  .main-visual .headingBlock__main__sub {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width:599px) {
   .main-visual .headingBlock__main {
@@ -1149,8 +1158,8 @@ li {
 }
 @media screen and (max-width:599px) {
   .section {
-    padding-top: 40px;
-    margin-bottom: 96px;
+    padding-top: 80px;
+    margin-bottom: 46px;
   }
 }
 
@@ -1226,6 +1235,11 @@ li {
   margin-bottom: 20px;
   z-index: 1;
 }
+@media screen and (max-width:599px) {
+  .gallery .animals-wrap .item {
+    width: 45%;
+  }
+}
 .gallery .animals-wrap .item-content {
   position: relative;
   width: 100%;
@@ -1237,40 +1251,14 @@ li {
   vertical-align: bottom;
   /*画像の下にできる余白を削除*/
 }
-@media only screen and (max-width: 768px) {
-  .gallery .animals-wrap .item {
-    width: 49.5%;
-    /*横並びで2つ表示*/
-  }
-}
 .gallery .animals-wrap .fancybox-thumbs {
   background: transparent !important;
 }
 .gallery .animals-wrap .fancybox-thumbs__list a:before {
   border: 6px solid #FA999B;
 }
-.gallery .animals-wrap ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 .gallery .animals-wrap a {
   color: #333;
-}
-.gallery .animals-wrap a:hover,
-.gallery .animals-wrap a:active {
-  text-decoration: none;
-}
-.gallery .animals-wrap h1 {
-  text-align: center;
-  font-size: 6vw;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 30px 0;
-}
-.gallery .animals-wrap p {
-  margin: 0 10px 10px 10px;
-  word-wrap: break-word;
 }
 .gallery .animals-wrap .btn {
   margin: 36px auto;
