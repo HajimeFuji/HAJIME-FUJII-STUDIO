@@ -832,7 +832,7 @@ li {
 }
 
 .page-wrap {
-  align-items: center;
+  display: flex;
 }
 @media screen and (max-width:599px) {
   .page-wrap {
@@ -912,7 +912,6 @@ li {
     max-width: initial;
     margin: 32px auto 0;
     padding: 0 20px;
-    justify-content: space-around;
     row-gap: 32px;
   }
   .works-wrap .article {

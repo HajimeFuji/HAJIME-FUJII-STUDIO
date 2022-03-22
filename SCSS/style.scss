@@ -9,8 +9,8 @@
 @use "darkmode";
 
 .page-wrap {
-    // display: flex;
-    align-items: center;
+    display: flex;
+    // align-items: center;
     @include mq(sp){
         display: initial;
     }
@@ -89,7 +89,7 @@
             max-width: initial;
             margin: 32px auto 0;
             padding: 0 20px;
-            justify-content: space-around;
+            // justify-content: space-around;
             row-gap: 32px;
             .article{
                 width: 48%;

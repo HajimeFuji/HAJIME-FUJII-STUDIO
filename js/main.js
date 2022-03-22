@@ -4,7 +4,7 @@ Vue.createApp({
             category: '',
             images: [
                 { index: 1,
-                    src: "./img_photos/animals/bear_01.jpg",
+                    src: "./img_photos/animals/bear_01.JPG",
                     category: "Animals"
                 },
                 { index: 2,
@@ -17,7 +17,7 @@ Vue.createApp({
                 },
                 { index: 4,
                     src: "./img_photos/animals/risu_02.jpg",
-                    category: " Animals"
+                    category: "Animals"
                 },
                 { index: 5,
                     src: "./img_photos/birds/akagera.jpg",
