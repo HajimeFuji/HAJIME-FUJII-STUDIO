@@ -705,7 +705,7 @@ hr.style2 {
 
 body {
   color: #323232;
-  font-family: "adobe-caslon-pro", "Noto Serif JP", "Noto sans JP", "inter", sans-serif;
+  font-family: "adobe-caslon-pro", "Noto Serif JP", "Noto sans JP", "inter", noto sans;
 }
 
 h2 {
@@ -1174,19 +1174,9 @@ li {
   }
 }
 
-.gallery {
-  max-width: calc(100vw - 160px);
-  margin: 0 auto;
-}
-@media screen and (max-width:599px) {
-  .gallery {
-    max-width: initial;
-    width: 100%;
-    padding: 0 20px;
-  }
-}
 .gallery .section-headline {
   text-align: center;
+  width: 100vw;
 }
 @media screen and (max-width:599px) {
   .gallery .section-headline {
@@ -1195,6 +1185,8 @@ li {
   }
 }
 .gallery .animals-wrap {
+  max-width: calc(100vw - 160px);
+  margin: 0 auto;
   /*＝＝＝並び替えボタンのCSS*/
   /*＝＝＝Muuriのレイアウトのための調整 */
   /*各画像の横幅などの設定*/
@@ -1206,7 +1198,9 @@ li {
 }
 @media screen and (max-width:599px) {
   .gallery .animals-wrap {
+    max-width: initial;
     width: 100%;
+    padding: 0 20px;
   }
 }
 .gallery .animals-wrap .sort-btn {
@@ -1217,6 +1211,7 @@ li {
 }
 @media screen and (max-width:599px) {
   .gallery .animals-wrap .sort-btn {
+    justify-content: space-around;
     padding: 10px 0px;
   }
 }
@@ -1227,6 +1222,16 @@ li {
   cursor: pointer;
   padding: 10px;
   margin: 0 10px;
+  font-family: "inter";
+  text-align: center;
+}
+@media screen and (max-width:599px) {
+  .gallery .animals-wrap .sort-btn li {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
 }
 .gallery .animals-wrap .sort-btn li.active {
   /*ボタンに現在地＝activeというクラス名がついたら背景色を変更*/
@@ -1235,22 +1240,21 @@ li {
 .gallery .animals-wrap .grid {
   position: relative;
   /*並び替えの基準点を指定*/
+  display: flex;
+  flex-wrap: wrap;
 }
 .gallery .animals-wrap .item {
   display: block;
   position: absolute;
-  left: 80px;
-  width: 200px;
-  height: 150px;
-  margin-right: 24px;
-  margin-bottom: 20px;
+  width: calc((100% - 2px) / 5);
+  aspect-ratio: 4/3;
+  padding: 10px 10px 0 0;
   z-index: 1;
 }
 @media screen and (max-width:599px) {
   .gallery .animals-wrap .item {
-    width: 47%;
-    margin-right: 10px;
-    justify-content: space-around;
+    width: 49%;
+    justify-content: space-between;
   }
 }
 .gallery .animals-wrap .item-content {
