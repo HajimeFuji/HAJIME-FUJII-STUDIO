@@ -475,21 +475,25 @@
             position: relative;/*並び替えの基準点を指定*/
             display: flex;
             flex-wrap: wrap;
-            // row-gap: 30px;
+            width: 100%;
+            justify-content: center;
+            column-gap: 1em;
+            // margin: 0 auto;
         }
         /*各画像の横幅などの設定*/
         .item {
             display: block;
             position: absolute;
-            width: calc((100% - 2px) /5);
+            // width: calc((100% - 2px) /5);
+            width: 20%;
             aspect-ratio: 4/3;
             // width: 200px;
             // height: 150px;
-            padding: 10px 10px 0 0;
+            // padding: 10px 10px 0 0;
             z-index: 1;
             @include mq(sp) {
-                width: 49%;
-                justify-content: space-between;
+                width: 49.5%;
+                // justify-content: space-between;
             }
         }
 
