@@ -37,7 +37,7 @@
         width: 100%;
         // aspect-ratio: 4 / 3;
         // padding-top: 100px;
-        margin-bottom: 150px;
+        margin-bottom: 80px;
     }
     
     .headingBlock {
@@ -100,9 +100,16 @@
         .img-box{
             // BGCを透過させて少し黄色が買った感じに
             background-color: $maingreen;
+            width: 300px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
             // 子要素が親要素より大きい時に隠す
             // img-boxの大きさは指定しないと子要素の大きさ維持
             overflow: hidden;
+            @include mq(sp){
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+                height: initial;
+                width: 100%;
+            }
         }
 
         &__img {
@@ -168,9 +175,15 @@
         .img-box{
             // BGCを透過させて少し黄色が買った感じに
             background-color: $maingreen;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
             // 子要素が親要素より大きい時に隠す
             // img-boxの大きさは指定しないと子要素の大きさ維持
             overflow: hidden;
+            @include mq(sp){
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+                height: initial;
+                width: 100%;
+            }
         }
 
         &__img {
@@ -275,6 +288,7 @@
 
         .profile__img {
             width: 440px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
             // height: 647px;
             @include mq(sp){
                 position: initial;
@@ -423,7 +437,7 @@
         text-align: center;
         width: 100vw;
         @include mq(sp) {
-            padding-top: 100px;
+            padding-top: 40px;
             margin-bottom: 20px;
         }
     }
@@ -569,24 +583,31 @@
 }
 
 .gallery2 {
-    width: calc(100vw - 160px);
-    margin: 0 auto;
-    @include mq(sp){
-        max-width: initial;
-        width: 100%;
-        padding: 0 20px;
-    }
+    // width: calc(100vw - 160px);
+    // margin: 0 auto;
+    // @include mq(sp){
+    //     max-width: initial;
+    //     width: 100%;
+    //     padding: 0 20px;
+    // }
 
     .section-headline {
         text-align: center;
-        // position: relative;
+        width: 100vw;
         @include mq(sp) {
-            padding-top: 100px;
+            padding-top: 40px;
             margin-bottom: 20px;
         }
     }
 
     .animals2-wrap {
+        max-width: calc(100vw - 160px);
+        margin: 0 auto;
+        @include mq(sp){
+            max-width: initial;
+            width: 100%;
+            padding: 0 20px;
+        }
 
         .category-list {
             display: grid;
@@ -631,32 +652,39 @@
 }
 
 .gallery3 {
-    max-width: calc(100vw - 160px);
-    margin: 0 auto;
-    @include mq(sp){
-        max-width: initial;
-        width: 100%;
-        padding: 0 20px;
-    }
+    // max-width: calc(100vw - 160px);
+    // margin: 0 auto;
+    // @include mq(sp){
+    //     max-width: initial;
+    //     width: 100%;
+    //     padding: 0 20px;
+    // }
 
     .section-headline {
         text-align: center;
-        position: relative;
+        width: 100vw;
         @include mq(sp) {
-            padding-top: 100px;
+            padding-top: 40px;
             margin-bottom: 20px;
         }
     }
 
     .natures-wrap {
-        // padding-top: 32px;
-        // // padding-bottom: 288px;
-        // margin: 0 80px;
+        max-width: calc(100vw - 160px);
+        margin: 0 auto;
+        @include mq(sp){
+            max-width: initial;
+            width: 100%;
+            padding: 0 20px;
+        }
     }
 
     .natures__img {
         margin: 56px auto;
         width: 60%;
+        @include mq(sp) {
+            width: 100%;
+        }
     }
 
     .btn {
