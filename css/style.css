@@ -795,12 +795,11 @@ li {
 }
 
 .drawer-nav {
-  text-align: center;
   padding: 60px;
 }
 .drawer-nav .drawer-menu-item {
   font-size: 16px;
-  font-family: "inter";
+  font-family: "Noto sans JP";
   margin-bottom: 28px;
   padding: 0;
 }
