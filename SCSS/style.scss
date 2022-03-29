@@ -101,12 +101,12 @@
             // BGCを透過させて少し黄色が買った感じに
             background-color: $maingreen;
             width: 300px;
-            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.5);
             // 子要素が親要素より大きい時に隠す
             // img-boxの大きさは指定しないと子要素の大きさ維持
             overflow: hidden;
             @include mq(sp){
-                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+                box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.2);
                 height: initial;
                 width: 100%;
             }
@@ -173,14 +173,14 @@
 
     &-content {
         .img-box{
-            // BGCを透過させて少し黄色が買った感じに
+            // BGCを透過させて少し黄色がかった感じに
             background-color: $maingreen;
-            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.5);
             // 子要素が親要素より大きい時に隠す
             // img-boxの大きさは指定しないと子要素の大きさ維持
             overflow: hidden;
             @include mq(sp){
-                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+                box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.2);
                 height: initial;
                 width: 100%;
             }
@@ -288,11 +288,12 @@
 
         .profile__img {
             width: 440px;
-            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.5);
             // height: 647px;
             @include mq(sp){
                 position: initial;
                 width: 100%;
+                box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.2);
                 margin-top: 16px;
             }
         }
